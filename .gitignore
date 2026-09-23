@@ -4,3 +4,6 @@
 node_modules/
 dist/
 .angular/
+
+# тимчасовi сторiнки lt.shot(css=...), якщо зйомка обiрвалась
+.shot_*.html
