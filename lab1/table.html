@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Шаренко Владислав Юрійович">
+    <meta name="description"
+          content="Завдання 1 - складна таблиця навантажень">
+    <title>Лабораторна робота №1 - таблиця</title>
+    <style>
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 15px;
+            color: #202020;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f4e79;
+            color: #ffffff;
+            padding: 15px 25px;
+        }
+        header p {
+            margin: 3px 0;
+            font-size: 14px;
+        }
+        h1 {
+            margin: 0 0 6px 0;
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 19px;
+            color: #1f4e79;
+        }
+        header h2 {
+            margin: 0 0 10px 0;
+            color: #cfe0f0;
+        }
+        main {
+            padding: 15px 25px 30px 25px;
+        }
+        a {
+            color: #1f4e79;
+        }
+        nav a {
+            font-weight: bold;
+        }
+        footer {
+            background-color: #1f4e79;
+            color: #cfe0f0;
+            padding: 10px 25px;
+            font-size: 13px;
+        }
+
+        /* ---- таблиця навантажень ---- */
+        table {
+            border-collapse: collapse;
+            background-color: #ffffff;
+            font-size: 13px;
+        }
+        caption {
+            text-align: left;
+            font-weight: bold;
+            padding-bottom: 6px;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333333;
+            padding: 4px 6px;
+            vertical-align: middle;
+        }
+        thead th {
+            background-color: #dde7f0;
+            text-align: center;
+        }
+        td {
+            text-align: center;
+        }
+        td.text {
+            text-align: left;
+        }
+        col.grp {
+            background-color: #fbfcfe;
+        }
+
+        /* дріб: над рискою - нормативні, під рискою - розрахункові */
+        .fr {
+            display: inline-block;
+            text-align: center;
+            line-height: 1.25;
+        }
+        .fr .up {
+            display: block;
+            border-bottom: 1px solid #333333;
+            padding: 0 4px;
+        }
+        .fr .dn {
+            display: block;
+            padding: 0 4px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Проектування та розробка веб-застосувань</h1>
+    <h2>Лабораторна робота №1. Завдання 1 - таблиця</h2>
+    <p>Студент: Шаренко Владислав Юрійович</p>
+    <p>Група: АнД-31</p>
+    <p>Варіант: 24 (таблиця - варіант 6)</p>
+</header>
+
+<nav>
+    <p><a href="index.html">&larr; Повернутися на головну сторінку</a></p>
+</nav>
+
+<main>
+
+    <h2>Опис завдання</h2>
+    <p>
+        Розробити веб-сторінку зі складною таблицею відповідно до
+        варіанту 6. Таблиця містить перелік навантажень на конструкції
+        будівлі. Особливості таблиці:
+    </p>
+    <ul>
+        <li>
+            багаторівнева шапка - заголовок «Навантаження» об'єднує
+            вісім стовпців по горизонталі (атрибут <code>colspan</code>);
+        </li>
+        <li>
+            у стовпці «Конструкції» назви груп об'єднують декілька рядків по
+            вертикалі (атрибут <code>rowspan</code>);
+        </li>
+        <li>
+            числові значення подані у вигляді дробу: над рискою - нормативні,
+            під рискою - розрахункові.
+        </li>
+    </ul>
+
+    <h2>Результат</h2>
+
+    <table>
+        <caption>Таблиця навантажень на конструкції (варіант 6)</caption>
+
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <colgroup class="grp">
+            <col span="8">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th rowspan="3">№№</th>
+                <th rowspan="3">Конструкції</th>
+                <th rowspan="3">Найменування навантаження</th>
+                <th colspan="8">
+                    Навантаження (над рискою - нормативні,
+                    під рискою - розрахункові)
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="2">Постійне</th>
+                <th colspan="2">Тимчасове тривале</th>
+                <th>Коефіцієнт сполучень</th>
+                <th colspan="2">Тимчасове короткочасне</th>
+                <th>Коефіцієнт сполучень</th>
+                <th rowspan="2">Повне навантаження</th>
+            </tr>
+            <tr>
+                <th>V<sub>1</sub></th>
+                <th>V<sub>2</sub></th>
+                <th>&psi;<sub>1</sub></th>
+                <th>V<sub>3</sub></th>
+                <th>V<sub>4</sub></th>
+                <th>&psi;<sub>2</sub></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>6</td>
+                <td rowspan="3">Покриття, тип I (горизонтальна проекція)</td>
+                <td class="text">
+                    Без урахування ваги з/б балок
+                    (товщина з/б плити покриття 3 см)
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">306,3</span>
+                        <span class="dn">348,8</span>
+                    </span>
+                </td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">70,0</span>
+                        <span class="dn">98,0</span>
+                    </span>
+                </td>
+                <td>1,0</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">376,3</span>
+                        <span class="dn">446,8</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class="text">
+                    З урахуванням ваги з/б гребеневих балок перерізом
+                    0,3 м х 0,4 м (при горизонтальних проекціях довжини
+                    балки 7 м та вантажній площі 7 м<sup>2</sup>)
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">615,9</span>
+                        <span class="dn">689,4</span>
+                    </span>
+                </td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">70,0</span>
+                        <span class="dn">98,0</span>
+                    </span>
+                </td>
+                <td>1,0</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">685,9</span>
+                        <span class="dn">787,4</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td class="text">
+                    З урахуванням навантаження від покриття тип 2 (без урахування
+                    ваги з/б гребеневих балок)
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">330,9</span>
+                        <span class="dn">375,0</span>
+                    </span>
+                </td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">50,0</span>
+                        <span class="dn">70,0</span>
+                    </span>
+                </td>
+                <td>1,0</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">380,9</span>
+                        <span class="dn">445,0</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Покриття, тип II</td>
+                <td class="text">Горизонтальна проекція</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">77,8</span>
+                        <span class="dn">84,7</span>
+                    </span>
+                </td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">50,0</span>
+                        <span class="dn">70,0</span>
+                    </span>
+                </td>
+                <td>1,0</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">127,8</span>
+                        <span class="dn">154,7</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td rowspan="2">Балкони (лоджії)</td>
+                <td class="text">
+                    З урахуванням суцільного рівномірного навантаження
+                    по площі балкона (фрагменти 1 та 2)
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">369,1</span>
+                        <span class="dn">420,2</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">60,0</span>
+                        <span class="dn">91,0</span>
+                    </span>
+                </td>
+                <td>&ndash;</td>
+                <td>0,95</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">260,0</span>
+                        <span class="dn">240,0</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">70,0</span>
+                        <span class="dn">98,0</span>
+                    </span>
+                </td>
+                <td>0,9</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">678,0</span>
+                        <span class="dn">810,9</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td class="text">
+                    З урахуванням смугового рівномірного навантаження
+                    на ділянки завширшки 0,8 м вздовж огородження
+                    (фрагменти 1 і 2)
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">369,1</span>
+                        <span class="dn">420,2</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">140,0</span>
+                        <span class="dn">182,0</span>
+                    </span>
+                </td>
+                <td>&ndash;</td>
+                <td>0,95</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">400,0</span>
+                        <span class="dn">480,0</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">70,0</span>
+                        <span class="dn">98,0</span>
+                    </span>
+                </td>
+                <td>0,9</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">925,1</span>
+                        <span class="dn">1113,3</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td rowspan="2">Карнизні плити</td>
+                <td class="text">Фрагмент 3</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">305,0</span>
+                        <span class="dn">340,7</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">77,8</span>
+                        <span class="dn">84,7</span>
+                    </span>
+                </td>
+                <td>&ndash;</td>
+                <td>0,95</td>
+                <td>&ndash;</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">50,0</span>
+                        <span class="dn">70,0</span>
+                    </span>
+                </td>
+                <td>0,9</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">423,9</span>
+                        <span class="dn">484,2</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td class="text">
+                    Фрагмент 4 з урахуванням ваги конструкцій покриття, тип 1,
+                    та з/б поясів при їх омонолічуванні
+                </td>
+                <td>
+                    <span class="fr">
+                        <span class="up">305,0</span>
+                        <span class="dn">340,7</span>
+                    </span>
+                </td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">392,0</span>
+                        <span class="dn">443,0</span>
+                    </span>
+                </td>
+                <td>1,0</td>
+                <td>
+                    <span class="fr">
+                        <span class="up">697,0</span>
+                        <span class="dn">783,7</span>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</main>
+
+<footer>
+    <p>КНУ імені Тараса Шевченка, факультет інформаційних технологій, 2026</p>
+</footer>
+
+</body>
+</html>
