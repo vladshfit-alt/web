@@ -1,0 +1,124 @@
+/*
+    Лабораторна робота №2. Каскадні таблиці стилів
+    Шаренко Владислав Юрійович, група АнД-31,
+    варіант 24 (варіант завдання 6)
+
+    common.css - спільні правила для всіх трьох сторінок: шрифт, розмітка
+    шапки, основного блоку та підвалу. Підключається першим; файл сторінки
+    (index.css, page2.css, page3.css) підключається після нього і за
+    правилом каскаду перевизначає кольори та фон.
+*/
+
+/* 1. ЗАГАЛЬНІ ПРАВИЛА */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222222;
+    background-color: #ffffff;
+}
+
+a {
+    font-weight: bold;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. HEADER */
+
+.site-header {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 24px 14px;
+    border-bottom: 3px solid currentColor;
+}
+
+.site-header h1,
+.site-header h2 {
+    margin: 0 0 6px;
+    text-align: center;
+}
+
+.site-header h1 {
+    font-size: 28px;
+}
+
+.site-header h2 {
+    font-size: 20px;
+}
+
+.site-title,
+.student-info,
+.task-info {
+    margin: 4px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.site-title {
+    font-weight: bold;
+}
+
+.page-nav {
+    margin-bottom: 10px;
+}
+
+.page-nav a {
+    margin-right: 18px;
+}
+
+/* 3. MAIN */
+
+.page-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 24px 30px;
+}
+
+/* 4. FOOTER */
+
+.site-footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    border-top: 1px solid currentColor;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* 5. АДАПТИВНІСТЬ */
+
+@media (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+
+    .site-header,
+    .page-content,
+    .site-footer {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .site-header h1 {
+        font-size: 22px;
+    }
+
+    .site-header h2 {
+        font-size: 17px;
+    }
+}

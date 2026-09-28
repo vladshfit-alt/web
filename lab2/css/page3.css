@@ -1,0 +1,44 @@
+/*
+    Лабораторна робота №2. Каскадні таблиці стилів
+    Шаренко Владислав Юрійович, група АнД-31,
+    варіант 24 (варіант завдання 6)
+
+    page3.css - оформлення третьої сторінки: малюнок робочого місця
+    аналітика - фонове зображення сторінки. Текст розміщено на
+    напівпрозорих панелях, щоб він читався поверх малюнка.
+*/
+
+/* 1. ФОНОВЕ ЗОБРАЖЕННЯ */
+
+body {
+    min-height: 100vh;
+    color: #1d2b3a;
+    background-color: #dfe8ee;
+    background-image: url("../img/office_background.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a,
+a:visited {
+    color: #800020;
+}
+
+/* 2. ПАНЕЛІ З ТЕКСТОМ */
+
+.site-header,
+.page-content,
+.site-footer {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.site-header {
+    border-bottom-color: #1d2b3a;
+}
+
+.page-content h1 {
+    margin: 10px 0 6px;
+    font-size: 28px;
+}

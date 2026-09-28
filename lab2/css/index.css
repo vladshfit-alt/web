@@ -1,0 +1,51 @@
+/*
+    Лабораторна робота №2. Каскадні таблиці стилів
+    Шаренко Владислав Юрійович, група АнД-31,
+    варіант 24 (варіант завдання 6)
+
+    index.css - оформлення головної сторінки за варіантом (табл. 1.1):
+    колір фону - блакитний, колір посилань - бордовий, колір тексту - синій.
+*/
+
+/* 1. КОЛЬОРИ СТОРІНКИ */
+
+body {
+    color: #0033a0;
+    background-color: #a8dcf0;
+}
+
+a,
+a:visited {
+    color: #800020;
+}
+
+/* 2. РОЗДІЛИ */
+
+.page-content h3 {
+    margin: 22px 0 8px;
+    font-size: 20px;
+}
+
+/* 3. СПИСКИ */
+
+.category-list > li {
+    margin-bottom: 10px;
+}
+
+.category-name {
+    font-weight: bold;
+}
+
+.position-list {
+    margin: 4px 0 0;
+    list-style-type: square;
+}
+
+.term-list dt {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.term-list dd {
+    margin-left: 28px;
+}
