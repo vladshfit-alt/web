@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+    Лабораторна робота №3. Дизайн та верстання веб-сторінки за простим макетом
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+    Landing page про програмний продукт - застосунок «Пара»
+-->
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Шаренко Владислав Юрійович">
+    <meta name="description"
+          content="Пара - застосунок з розкладом занять для студентів">
+    <title>Пара - розклад занять для студентів</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- BEGIN MENU -->
+    <div class="menu">
+        <p class="menu-title">Меню</p>
+        <ul class="menu-list">
+            <li><a href="#about">Опис програми</a></li>
+            <li><a href="#download">Завантаження</a></li>
+            <li><a href="#contacts">Контакти автора</a></li>
+            <li><a href="#feedback">Зворотний зв'язок</a></li>
+        </ul>
+    </div>
+    <!-- END MENU -->
+
+    <div class="main">
+
+        <!-- BEGIN HEADER -->
+        <div class="header">
+            <img class="header-logo" src="img/logo.svg" width="120" height="120"
+                 alt="Логотип застосунку Пара">
+            <h1 class="header-title">Пара</h1>
+            <p class="header-slogan">Розклад занять завжди під рукою</p>
+        </div>
+        <!-- END HEADER -->
+
+        <!-- BEGIN CONTENT -->
+        <div class="content">
+
+            <div class="block" id="about">
+                <h2>Опис програми</h2>
+                <p>
+                    Пара - мобільний застосунок для студентів, який показує
+                    розклад занять на день і на тиждень. Достатньо обрати
+                    університет і групу, і розклад завантажиться сам.
+                </p>
+                <ul class="features">
+                    <li>розклад на сьогодні і на тиждень;</li>
+                    <li>аудиторія та викладач для кожної пари;</li>
+                    <li>нагадування за 10 хвилин до початку;</li>
+                    <li>робота без інтернету.</li>
+                </ul>
+            </div>
+
+            <div class="block" id="download">
+                <h2>Завантаження</h2>
+                <p>Застосунок безкоштовний. Оберіть свою платформу:</p>
+                <p>
+                    <a class="button" href="#download">Завантажити для Android</a>
+                    <a class="button" href="#download">Завантажити для iOS</a>
+                </p>
+                <p>Приклади роботи застосунку:</p>
+                <div class="screens">
+                    <div class="screen">
+                        <img src="img/screen_day.svg" width="200" height="400"
+                             alt="Екран розкладу на день">
+                        <p>Розклад на день</p>
+                    </div>
+                    <div class="screen">
+                        <img src="img/screen_week.svg" width="200" height="400"
+                             alt="Екран розкладу на тиждень">
+                        <p>Розклад на тиждень</p>
+                    </div>
+                    <div class="screen">
+                        <img src="img/screen_reminder.svg" width="200" height="400"
+                             alt="Екран нагадування про пару">
+                        <p>Нагадування про пару</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block" id="contacts">
+                <h2>Контакти автора</h2>
+                <p class="contact-row">
+                    <span class="contact-label">Автор:</span>
+                    Шаренко Владислав Юрійович
+                </p>
+                <p class="contact-row">
+                    <span class="contact-label">Пошта:</span>
+                    <a href="mailto:vladshfit@knu.ua">vladshfit@knu.ua</a>
+                </p>
+                <p class="contact-row">
+                    <span class="contact-label">GitHub:</span>
+                    <a href="https://github.com/vladshfit-alt">github.com/vladshfit-alt</a>
+                </p>
+            </div>
+
+            <div class="block" id="feedback">
+                <h2>Зворотний зв'язок</h2>
+                <p>Напишіть, що покращити в застосунку:</p>
+                <form class="feedback-form" action="#" method="post">
+                    <p>
+                        <label for="name">Ім'я</label>
+                        <input type="text" id="name" name="name" required>
+                    </p>
+                    <p>
+                        <label for="email">Електронна пошта</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p>
+                        <label for="message">Повідомлення</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </p>
+                    <p>
+                        <button class="button" type="submit">Надіслати</button>
+                    </p>
+                </form>
+            </div>
+
+        </div>
+        <!-- END CONTENT -->
+
+        <!-- BEGIN ADDITIONAL -->
+        <div class="additional">
+            <p class="additional-title">Пара 2.0 вже скоро!</p>
+            <p>Нова версія нагадуватиме ще й про дедлайни лабораторних.</p>
+        </div>
+        <!-- END ADDITIONAL -->
+
+        <!-- BEGIN FOOTER -->
+        <div class="footer">
+            <p>&copy; 2026 Шаренко Владислав Юрійович, група АнД-31, варіант 24</p>
+        </div>
+        <!-- END FOOTER -->
+
+    </div>
+
+    <div class="clear"></div>
+
+</div>
+
+</body>
+</html>

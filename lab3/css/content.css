@@ -1,0 +1,60 @@
+/*
+    content.css - основний вміст: чотири інформаційні блоки
+*/
+
+/* 1. ІНФОРМАЦІЙНІ БЛОКИ */
+.block {
+    padding: 50px 80px;
+    border-bottom: 2px solid var(--color-header);
+}
+
+.block p {
+    margin-bottom: 16px;
+}
+
+/* 2. ОПИС ПРОГРАМИ */
+.features {
+    list-style: disc;
+    padding-left: 30px;
+}
+
+/* 3. ЗАВАНТАЖЕННЯ */
+.screen {
+    display: inline-block;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.screen p {
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+/* 4. КОНТАКТИ АВТОРА */
+.contact-label {
+    display: inline-block;
+    width: 100px;
+    font-weight: 500;
+}
+
+.contact-row a {
+    color: var(--color-menu);
+    text-decoration: underline;
+}
+
+/* 5. ЗВОРОТНИЙ ЗВ'ЯЗОК */
+.feedback-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 600px;
+    padding: 10px;
+    border: 2px solid var(--color-header);
+    border-radius: 8px;
+    font-family: var(--font-family-text);
+    font-size: 18px;
+}

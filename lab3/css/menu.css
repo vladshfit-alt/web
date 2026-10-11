@@ -1,0 +1,33 @@
+/*
+    menu.css - головне меню ліворуч від решти сторінки
+*/
+
+/* 1. БЛОК МЕНЮ */
+.menu {
+    float: left;
+    width: var(--width-menu);
+    padding-top: 40px;
+}
+
+.menu-title {
+    padding: 0 30px 20px;
+    color: var(--color-accent);
+    font-family: var(--font-family-h);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* 2. ПУНКТИ МЕНЮ */
+.menu-list a {
+    display: block;
+    padding: 16px 30px;
+    color: var(--color-white);
+    font-size: var(--font-size-p);
+}
+
+/* 3. ЗМІНА ПРИ НАВЕДЕННІ */
+.menu-list a:hover {
+    background-color: var(--color-bg);
+    color: var(--color-menu);
+    text-decoration: underline;
+}

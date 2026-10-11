@@ -1,0 +1,26 @@
+/*
+    base.css - базові налаштування сайту у кастомних властивостях
+*/
+
+/* 1. РОЗМІРИ */
+:root {
+    --width: 1440px;
+    --width-menu: 260px;
+    --width-main: 1180px;
+    --height-header: 250px;
+
+    /* 2. КОЛЬОРИ */
+    --color-menu: #24315e;
+    --color-bg: #f4f6fb;
+    --color-header: #dfe7f7;
+    --color-accent: #f2994a;
+    --color-text: #2b2b2b;
+    --color-white: #ffffff;
+
+    /* 3. ШРИФТИ */
+    --font-family-h: "Montserrat", Arial, sans-serif;
+    --font-family-text: "Roboto", Arial, sans-serif;
+    --font-size-h1: 64px;
+    --font-size-h2: 36px;
+    --font-size-p: 20px;
+}

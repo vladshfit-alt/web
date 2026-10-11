@@ -1,0 +1,32 @@
+/*
+    header.css - заголовок сайту з логотипом і назвою продукту
+*/
+
+/* 1. БЛОК ЗАГОЛОВКА */
+.header {
+    position: relative;
+    height: var(--height-header);
+    background-color: var(--color-header);
+}
+
+/* 2. ЛОГОТИП */
+.header-logo {
+    position: absolute;
+    left: 80px;
+    top: 65px;
+}
+
+/* 3. НАЗВА І СЛОГАН */
+.header-title {
+    position: absolute;
+    left: 240px;
+    top: 55px;
+    font-size: var(--font-size-h1);
+}
+
+.header-slogan {
+    position: absolute;
+    left: 240px;
+    top: 145px;
+    font-size: 24px;
+}
