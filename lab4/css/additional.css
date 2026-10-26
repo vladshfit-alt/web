@@ -1,0 +1,17 @@
+/*
+    additional.css - додаткова секція: рекламний блок
+*/
+
+/* 1. РЕКЛАМНИЙ БЛОК */
+.additional {
+    padding: 40px 80px;
+    background-color: var(--color-accent);
+    color: var(--color-menu);
+}
+
+.additional__title {
+    margin-bottom: 8px;
+    font-family: var(--font-family-h);
+    font-size: 32px;
+    font-weight: 700;
+}

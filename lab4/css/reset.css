@@ -1,0 +1,34 @@
+/*
+    reset.css - скидання стандартних стилів браузера
+*/
+
+/* 1. ВІДСТУПИ */
+html,
+body,
+div,
+h1,
+h2,
+p,
+ul,
+li,
+form,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. СПИСКИ */
+ul {
+    list-style: none;
+}
+
+/* 3. ЗОБРАЖЕННЯ */
+img {
+    border: 0;
+    display: block;
+}
+
+/* 4. ПОСИЛАННЯ */
+a {
+    text-decoration: none;
+}

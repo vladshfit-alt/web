@@ -1,0 +1,47 @@
+/*
+    menu.css - головне меню: колонка ліворуч на комп'ютері,
+    смуга зверху на планшеті, гамбургер на телефоні (media.css)
+*/
+
+/* 1. БЛОК МЕНЮ */
+.menu {
+    flex: 0 0 18%;
+    padding-top: 40px;
+    background-color: var(--color-menu);
+}
+
+.menu__title {
+    padding: 0 30px 20px;
+    color: var(--color-accent);
+    font-family: var(--font-family-h);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* 2. ПУНКТИ МЕНЮ */
+.menu__link {
+    display: block;
+    padding: 16px 30px;
+    color: var(--color-white);
+    font-size: var(--font-size-p);
+}
+
+/* 3. ЗМІНА ПРИ НАВЕДЕННІ */
+.menu__link:hover {
+    background-color: var(--color-bg);
+    color: var(--color-menu);
+    text-decoration: underline;
+}
+
+/* 4. КНОПКА ГАМБУРГЕР (видно лише на телефоні) */
+.menu__toggle,
+.menu__button {
+    display: none;
+}
+
+.menu__line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-white);
+}

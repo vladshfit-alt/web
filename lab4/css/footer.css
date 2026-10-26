@@ -1,0 +1,11 @@
+/*
+    footer.css - нижній колонтитул
+*/
+
+/* 1. НИЖНІЙ КОЛОНТИТУЛ */
+.footer {
+    padding: 24px 80px;
+    background-color: var(--color-menu);
+    color: var(--color-white);
+    font-size: 16px;
+}

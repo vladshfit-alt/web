@@ -1,0 +1,50 @@
+/*
+    timeline.css - секція «Історія розробки»: двосторонній таймлайн
+    на комп'ютері, односторонній на телефоні (media.css)
+*/
+
+/* 1. СПИСОК ПОДІЙ */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+}
+
+/* 2. ПОДІЯ: половина ширини, по черзі ліворуч і праворуч від лінії */
+.timeline__item {
+    width: 50%;
+}
+
+.timeline__item:nth-child(odd) {
+    align-self: flex-start;
+    border-right: 4px solid var(--color-accent);
+    text-align: right;
+}
+
+.timeline__item:nth-child(even) {
+    align-self: flex-end;
+    border-left: 4px solid var(--color-accent);
+}
+
+/* 3. КАРТКА ПОДІЇ */
+.timeline__card {
+    margin: 10px 24px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    background-color: var(--color-white);
+}
+
+.timeline__card h3 {
+    color: var(--color-menu);
+    font-family: var(--font-family-h);
+}
+
+.timeline__card p {
+    margin-bottom: 0;
+}
+
+.timeline__date {
+    color: var(--color-accent);
+    font-weight: 500;
+}

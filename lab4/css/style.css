@@ -1,0 +1,77 @@
+/*
+    style.css - головний файл стилів: підключає решту файлів
+    і містить спільні правила сторінки
+*/
+
+/* 1. ПІДКЛЮЧЕННЯ ФАЙЛІВ */
+@import url("reset.css");
+@import url("base.css");
+@import url("menu.css");
+@import url("header.css");
+@import url("content.css");
+@import url("stats.css");
+@import url("timeline.css");
+@import url("reviews.css");
+@import url("team.css");
+@import url("news.css");
+@import url("additional.css");
+@import url("footer.css");
+@import url("media.css");
+
+/* 2. СТОРІНКА */
+body {
+    background-color: var(--color-header);
+    color: var(--color-text);
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-p);
+    line-height: 1.5;
+}
+
+/* 3. СІТКА СТОРІНКИ: МЕНЮ І ПРАВА КОЛОНКА */
+.page {
+    display: flex;
+    max-width: var(--width);
+    margin: 0 auto;
+}
+
+.page__main {
+    flex: 1;
+    background-color: var(--color-bg);
+}
+
+/* 4. ЗАГОЛОВКИ */
+h1,
+h2 {
+    font-family: var(--font-family-h);
+    color: var(--color-menu);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    margin-bottom: 20px;
+}
+
+/* 5. КНОПКИ */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-accent);
+    color: var(--color-menu);
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-p);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-menu);
+    color: var(--color-white);
+}

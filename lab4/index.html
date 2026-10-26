@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--
+    Лабораторна робота №4. Адаптивна верстка та семантичні теги
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+    Сайт з ЛР3 після рефакторингу: семантичні теги HTML5,
+    Flexbox і Grid замість float, три breakpoint-и;
+    п'ять нових секцій: статистика, історія розробки, відгуки,
+    команда, новини
+-->
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Шаренко Владислав Юрійович">
+    <meta name="description"
+          content="Пара - застосунок з розкладом занять для студентів">
+    <title>Пара - розклад занять для студентів</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page">
+
+    <!-- BEGIN MENU -->
+    <nav class="menu">
+        <p class="menu__title">Меню</p>
+        <input class="menu__toggle" id="menu-toggle" type="checkbox">
+        <label class="menu__button" for="menu-toggle">
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+        </label>
+        <ul class="menu__list">
+            <li><a class="menu__link" href="#about">Опис програми</a></li>
+            <li><a class="menu__link" href="#download">Завантаження</a></li>
+            <li><a class="menu__link" href="#stats">Статистика</a></li>
+            <li><a class="menu__link" href="#history">Історія розробки</a></li>
+            <li><a class="menu__link" href="#reviews">Відгуки</a></li>
+            <li><a class="menu__link" href="#team">Команда</a></li>
+            <li><a class="menu__link" href="#news">Новини</a></li>
+            <li><a class="menu__link" href="#contacts">Контакти автора</a></li>
+            <li><a class="menu__link" href="#feedback">Зворотний зв'язок</a></li>
+        </ul>
+    </nav>
+    <!-- END MENU -->
+
+    <div class="page__main">
+
+        <!-- BEGIN HEADER -->
+        <header class="header">
+            <img class="header__logo" src="img/logo.svg" width="120" height="120"
+                 alt="Логотип застосунку Пара">
+            <div>
+                <h1 class="header__title">Пара</h1>
+                <p class="header__slogan">Розклад занять завжди під рукою</p>
+            </div>
+        </header>
+        <!-- END HEADER -->
+
+        <!-- BEGIN CONTENT -->
+        <main class="content">
+
+            <section class="section" id="about">
+                <h2>Опис програми</h2>
+                <p>
+                    Пара - мобільний застосунок для студентів, який показує
+                    розклад занять на день і на тиждень. Достатньо обрати
+                    університет і групу, і розклад завантажиться сам.
+                </p>
+                <ul class="features">
+                    <li>розклад на сьогодні і на тиждень;</li>
+                    <li>аудиторія та викладач для кожної пари;</li>
+                    <li>нагадування за 10 хвилин до початку;</li>
+                    <li>робота без інтернету.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="download">
+                <h2>Завантаження</h2>
+                <p>Застосунок безкоштовний. Оберіть свою платформу:</p>
+                <p class="buttons">
+                    <a class="button" href="#download">Завантажити для Android</a>
+                    <a class="button" href="#download">Завантажити для iOS</a>
+                </p>
+                <p>Приклади роботи застосунку:</p>
+                <div class="screens">
+                    <figure class="screens__item">
+                        <img src="img/screen_day.svg" width="200" height="400"
+                             alt="Екран розкладу на день">
+                        <figcaption>Розклад на день</figcaption>
+                    </figure>
+                    <figure class="screens__item">
+                        <img src="img/screen_week.svg" width="200" height="400"
+                             alt="Екран розкладу на тиждень">
+                        <figcaption>Розклад на тиждень</figcaption>
+                    </figure>
+                    <figure class="screens__item">
+                        <img src="img/screen_reminder.svg" width="200" height="400"
+                             alt="Екран нагадування про пару">
+                        <figcaption>Нагадування про пару</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- BEGIN STATS -->
+            <section class="section" id="stats">
+                <h2>Статистика</h2>
+                <div class="stats">
+                    <article class="stats__card">
+                        <p class="stats__number">12 000</p>
+                        <p>студентів користуються застосунком</p>
+                    </article>
+                    <article class="stats__card">
+                        <p class="stats__number">48 з 60</p>
+                        <p>університетів міста підключено</p>
+                        <meter class="stats__bar" min="0" max="60" value="48">48 з 60</meter>
+                    </article>
+                    <article class="stats__card">
+                        <p class="stats__number">4.7</p>
+                        <p>середня оцінка в магазинах застосунків</p>
+                        <meter class="stats__bar" min="0" max="5" value="4.7">4.7 з 5</meter>
+                    </article>
+                    <article class="stats__card">
+                        <p class="stats__number">70%</p>
+                        <p>готовність версії 2.0</p>
+                        <progress class="stats__bar" max="100" value="70">70%</progress>
+                    </article>
+                </div>
+            </section>
+            <!-- END STATS -->
+
+            <!-- BEGIN HISTORY -->
+            <section class="section" id="history">
+                <h2>Історія розробки</h2>
+                <ol class="timeline">
+                    <li class="timeline__item">
+                        <div class="timeline__card">
+                            <time class="timeline__date" datetime="2024-09">вересень 2024</time>
+                            <h3>Ідея</h3>
+                            <p>Розклад у таблиці на сайті незручно відкривати з телефона.</p>
+                        </div>
+                    </li>
+                    <li class="timeline__item">
+                        <div class="timeline__card">
+                            <time class="timeline__date" datetime="2025-02">лютий 2025</time>
+                            <h3>Перша версія</h3>
+                            <p>Розклад на день для одного університету.</p>
+                        </div>
+                    </li>
+                    <li class="timeline__item">
+                        <div class="timeline__card">
+                            <time class="timeline__date" datetime="2025-09">вересень 2025</time>
+                            <h3>Нагадування</h3>
+                            <p>Сповіщення за 10 хвилин до пари і робота без інтернету.</p>
+                        </div>
+                    </li>
+                    <li class="timeline__item">
+                        <div class="timeline__card">
+                            <time class="timeline__date" datetime="2026-12">грудень 2026</time>
+                            <h3>Пара 2.0</h3>
+                            <p>Дедлайни лабораторних поруч із розкладом.</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+            <!-- END HISTORY -->
+
+            <!-- BEGIN REVIEWS -->
+            <section class="section" id="reviews">
+                <h2>Відгуки</h2>
+                <div class="reviews">
+                    <blockquote class="review">
+                        <div class="review__head">
+                            <span class="review__avatar">ОК</span>
+                            <p class="review__author">Оксана, 2 курс</p>
+                        </div>
+                        <p class="review__rating" aria-label="Оцінка 5 з 5">★★★★★</p>
+                        <p>Більше не шукаю аудиторію в останню хвилину.</p>
+                    </blockquote>
+                    <blockquote class="review">
+                        <div class="review__head">
+                            <span class="review__avatar">АД</span>
+                            <p class="review__author">Андрій, 4 курс</p>
+                        </div>
+                        <p class="review__rating" aria-label="Оцінка 4 з 5">★★★★☆</p>
+                        <p>Зручно, що розклад працює навіть у метро.</p>
+                    </blockquote>
+                    <blockquote class="review">
+                        <div class="review__head">
+                            <span class="review__avatar">МС</span>
+                            <p class="review__author">Марія, 1 курс</p>
+                        </div>
+                        <p class="review__rating" aria-label="Оцінка 5 з 5">★★★★★</p>
+                        <p>Нагадування рятують перші пари.</p>
+                    </blockquote>
+                </div>
+            </section>
+            <!-- END REVIEWS -->
+
+            <!-- BEGIN TEAM -->
+            <section class="section" id="team">
+                <h2>Команда</h2>
+                <div class="team">
+                    <article class="member">
+                        <span class="member__avatar">ІК</span>
+                        <h3>Ірина Коваль</h3>
+                        <p class="member__badge">Дизайн</p>
+                        <p>Малює екрани і стежить, щоб розклад читався з першого погляду.</p>
+                        <p class="member__links">
+                            <a href="#team">Behance</a>
+                            <a href="#team">LinkedIn</a>
+                        </p>
+                    </article>
+                    <article class="member">
+                        <span class="member__avatar">МП</span>
+                        <h3>Максим Петренко</h3>
+                        <p class="member__badge">Тестування</p>
+                        <p>Перевіряє кожну версію на десятку телефонів.</p>
+                        <p class="member__links">
+                            <a href="#team">GitHub</a>
+                            <a href="#team">Telegram</a>
+                        </p>
+                    </article>
+                    <article class="member">
+                        <span class="member__avatar">ОМ</span>
+                        <h3>Олена Мельник</h3>
+                        <p class="member__badge">Експертка</p>
+                        <p>Радить, як подавати розклад різних університетів.</p>
+                        <p class="member__links">
+                            <a href="#team">LinkedIn</a>
+                            <a href="#team">Telegram</a>
+                        </p>
+                    </article>
+                </div>
+            </section>
+            <!-- END TEAM -->
+
+            <!-- BEGIN NEWS -->
+            <section class="section" id="news">
+                <h2>Новини</h2>
+                <div class="news">
+                    <article class="post">
+                        <p class="post__meta">
+                            <time datetime="2026-10-01">1 жовтня 2026</time>
+                            <span class="post__category">Оновлення</span>
+                        </p>
+                        <h3>Темна тема</h3>
+                        <p>Розклад тепер можна читати вночі без яскравого екрана.</p>
+                        <ul class="post__tags">
+                            <li>дизайн</li>
+                            <li>версія 1.4</li>
+                        </ul>
+                        <a class="post__more" href="#news">Читати далі</a>
+                    </article>
+                    <article class="post">
+                        <p class="post__meta">
+                            <time datetime="2026-09-15">15 вересня 2026</time>
+                            <span class="post__category">Університети</span>
+                        </p>
+                        <h3>Ще 6 університетів</h3>
+                        <p>Додали розклади шести університетів Києва.</p>
+                        <ul class="post__tags">
+                            <li>розклад</li>
+                            <li>Київ</li>
+                        </ul>
+                        <a class="post__more" href="#news">Читати далі</a>
+                    </article>
+                    <article class="post">
+                        <p class="post__meta">
+                            <time datetime="2026-09-01">1 вересня 2026</time>
+                            <span class="post__category">Анонс</span>
+                        </p>
+                        <h3>Що буде в Пара 2.0</h3>
+                        <p>Дедлайни лабораторних і нагадування про них.</p>
+                        <ul class="post__tags">
+                            <li>версія 2.0</li>
+                            <li>дедлайни</li>
+                        </ul>
+                        <a class="post__more" href="#news">Читати далі</a>
+                    </article>
+                </div>
+            </section>
+            <!-- END NEWS -->
+
+            <section class="section" id="contacts">
+                <h2>Контакти автора</h2>
+                <address class="contacts">
+                    <p>
+                        <span class="contacts__label">Автор:</span>
+                        Шаренко Владислав Юрійович
+                    </p>
+                    <p>
+                        <span class="contacts__label">Пошта:</span>
+                        <a class="contacts__link"
+                           href="mailto:vladshfit@knu.ua">vladshfit@knu.ua</a>
+                    </p>
+                    <p>
+                        <span class="contacts__label">GitHub:</span>
+                        <a class="contacts__link"
+                           href="https://github.com/vladshfit-alt">github.com/vladshfit-alt</a>
+                    </p>
+                </address>
+            </section>
+
+            <section class="section" id="feedback">
+                <h2>Зворотний зв'язок</h2>
+                <p>Напишіть, що покращити в застосунку:</p>
+                <form class="form" action="#" method="post">
+                    <p class="form__field">
+                        <label for="name">Ім'я</label>
+                        <input type="text" id="name" name="name" required>
+                    </p>
+                    <p class="form__field">
+                        <label for="email">Електронна пошта</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p class="form__field">
+                        <label for="message">Повідомлення</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </p>
+                    <p>
+                        <button class="button" type="submit">Надіслати</button>
+                    </p>
+                </form>
+            </section>
+
+        </main>
+        <!-- END CONTENT -->
+
+        <!-- BEGIN ADDITIONAL -->
+        <aside class="additional">
+            <p class="additional__title">Пара 2.0 вже скоро!</p>
+            <p>Нова версія нагадуватиме ще й про дедлайни лабораторних.</p>
+        </aside>
+        <!-- END ADDITIONAL -->
+
+        <!-- BEGIN FOOTER -->
+        <footer class="footer">
+            <p>&copy; 2026 Шаренко Владислав Юрійович, група АнД-31, варіант 24</p>
+        </footer>
+        <!-- END FOOTER -->
+
+    </div>
+
+</div>
+
+</body>
+</html>
