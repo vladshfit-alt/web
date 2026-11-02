@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+    Лабораторна робота №5. Завдання 2.1 (варіант 4) і 2.2 (варіант 11)
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+-->
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2 - блоки і таблиця</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/task2.css">
+</head>
+<body>
+
+    <!-- BEGIN HEADER -->
+    <header class="page-header">
+        <h1>Лабораторна робота №5</h1>
+        <p class="subtitle">Завдання 2 - блоки з кнопками і таблиця чисел</p>
+        <ul class="student-info">
+            <li><b>Студент:</b> Шаренко Владислав Юрійович</li>
+            <li><b>Група:</b> АнД-31</li>
+            <li><b>Варіант:</b> 24</li>
+        </ul>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MENU -->
+    <nav class="main-menu">
+        <a class="menu-link" href="index.html">Головна</a>
+        <a class="menu-link" href="task1.html">Завдання 1</a>
+        <a class="menu-link" href="task2.html">Завдання 2</a>
+    </nav>
+    <!-- END MENU -->
+
+    <!-- BEGIN CONTENT -->
+    <main class="content">
+
+        <!-- BEGIN TASK 2.1 -->
+        <section class="card">
+            <h2>Завдання 2.1 (варіант 4) - закриття блоків</h2>
+            <p>
+                Дано блок з кнопкою «закрити блок». При натисканні на цю кнопку блок
+                повинен зникнути з форми разом з кнопкою. Блоки можуть бути вкладені
+                один в одного, кожен блок закриває своя кнопка.
+            </p>
+            <div id="bloky">
+                <div class="box">
+                    <button class="close-btn" type="button">закрити блок</button>
+                    <h3>Блок 1</h3>
+                    <p>Зовнішній блок, який містить два вкладені блоки.</p>
+                    <div class="box">
+                        <button class="close-btn" type="button">закрити блок</button>
+                        <h3>Блок 1.1</h3>
+                        <p>Вкладений блок першого рівня.</p>
+                        <div class="box">
+                            <button class="close-btn" type="button">закрити блок</button>
+                            <h3>Блок 1.1.1</h3>
+                            <p>Вкладений блок другого рівня.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <button class="close-btn" type="button">закрити блок</button>
+                        <h3>Блок 1.2</h3>
+                        <p>Ще один вкладений блок першого рівня.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <button class="close-btn" type="button">закрити блок</button>
+                    <h3>Блок 2</h3>
+                    <p>Самостійний блок без вкладень.</p>
+                </div>
+                <div class="box">
+                    <button class="close-btn" type="button">закрити блок</button>
+                    <h3>Блок 3</h3>
+                    <p>Ще один самостійний блок.</p>
+                </div>
+            </div>
+            <p>
+                <button class="btn btn-grey" type="button" onclick="vidnovyty_bloky()">Відновити блоки</button>
+            </p>
+        </section>
+        <!-- END TASK 2.1 -->
+
+        <!-- BEGIN TASK 2.2 -->
+        <section class="card">
+            <h2>Завдання 2.2 (варіант 11) - суми додатних та від'ємних елементів</h2>
+            <p>
+                Дана таблиця з числами. При натисканні на кнопку необхідно обрахувати суму
+                додатних і від'ємних елементів кожного рядка та стовпчика таблиці та
+                вивести ці суми у вигляді окремої таблиці.
+            </p>
+            <h3>Вихідна таблиця</h3>
+            <table id="tabl" class="numbers">
+                <tr><td>12</td><td>-5</td><td>7</td><td>-3</td><td>0</td></tr>
+                <tr><td>-8</td><td>4</td><td>-2</td><td>9</td><td>6</td></tr>
+                <tr><td>3</td><td>11</td><td>-7</td><td>-1</td><td>5</td></tr>
+                <tr><td>-4</td><td>-6</td><td>8</td><td>2</td><td>-9</td></tr>
+            </table>
+            <p>
+                <button class="btn" type="button" onclick="table_obrab()">Обрахувати суми</button>
+                <button class="btn btn-grey" type="button" onclick="ochystyty()">Очистити результат</button>
+            </p>
+            <div id="sumy"></div>
+        </section>
+        <!-- END TASK 2.2 -->
+
+    </main>
+    <!-- END CONTENT -->
+
+    <!-- BEGIN FOOTER -->
+    <footer class="page-footer">
+        <p>КНУ імені Тараса Шевченка, факультет інформаційних технологій, 2026</p>
+    </footer>
+    <!-- END FOOTER -->
+
+    <script src="scripts/task2.js"></script>
+</body>
+</html>

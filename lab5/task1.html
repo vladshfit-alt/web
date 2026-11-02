@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+    Лабораторна робота №5. Завдання 1 (варіант 4) - розклад пар
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+-->
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1 - розклад пар</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/task1.css">
+</head>
+<body>
+
+    <!-- BEGIN HEADER -->
+    <header class="page-header">
+        <h1>Лабораторна робота №5</h1>
+        <p class="subtitle">Завдання 1 - розклад пар (варіант 4)</p>
+        <ul class="student-info">
+            <li><b>Студент:</b> Шаренко Владислав Юрійович</li>
+            <li><b>Група:</b> АнД-31</li>
+            <li><b>Варіант:</b> 24</li>
+        </ul>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MENU -->
+    <nav class="main-menu">
+        <a class="menu-link" href="index.html">Головна</a>
+        <a class="menu-link" href="task1.html">Завдання 1</a>
+        <a class="menu-link" href="task2.html">Завдання 2</a>
+    </nav>
+    <!-- END MENU -->
+
+    <!-- BEGIN CONTENT -->
+    <main class="content">
+        <section class="card">
+            <h2>Умова завдання</h2>
+            <p>
+                Створити масиви значень: назва предмету; початок пари; прізвище
+                викладача (допускається пусте значення). Тривалість пари 80 хвилин.
+                Вивести інформацію про те, яка зараз пара, опираючись на поточний час.
+                Якщо в даний момент немає жодної пари, вивести одне з повідомлень:
+                «пари ще не почалися», «перерва після &lt;номер&gt; пари», «пари
+                закінчилися». Якщо не вказано прізвище викладача, вивести додаткове
+                повідомлення.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Панель керування</h2>
+            <p class="hint">
+                Для перевірки роботи скрипта можна задати довільний час замість поточного.
+            </p>
+            <p class="controls">
+                <label for="chas">Час для розрахунку:</label>
+                <input type="time" id="chas">
+                <button class="btn" type="button" onclick="ras()">Показати розклад</button>
+                <button class="btn btn-grey" type="button" onclick="skynuty()">Поточний час</button>
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Результати перевірки розкладу</h2>
+            <div id="rezult"></div>
+        </section>
+    </main>
+    <!-- END CONTENT -->
+
+    <!-- BEGIN FOOTER -->
+    <footer class="page-footer">
+        <p>КНУ імені Тараса Шевченка, факультет інформаційних технологій, 2026</p>
+    </footer>
+    <!-- END FOOTER -->
+
+    <script src="scripts/task1.js"></script>
+</body>
+</html>

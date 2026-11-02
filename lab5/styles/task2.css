@@ -1,0 +1,87 @@
+/*
+    task2.css - сторінка завдання 2: блоки з кнопками, таблиця чисел,
+    таблиці сум
+*/
+
+/* 1. БЛОКИ ЗАВДАННЯ 2.1 */
+.box {
+    margin: 10px 0;
+    padding: 10px 14px;
+    border: 2px solid #2b6ca3;
+    border-radius: 6px;
+    background-color: #f7fafd;
+}
+
+.box h3 {
+    margin: 0 0 6px;
+    color: #1f4e79;
+}
+
+.close-btn {
+    float: right;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #c62828;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* 2. ТАБЛИЦЯ ЧИСЕЛ ЗАВДАННЯ 2.2 */
+.numbers {
+    border-collapse: collapse;
+}
+
+.numbers td {
+    width: 40px;
+    padding: 8px 0;
+    border: 1px solid #c3ced9;
+    font-weight: bold;
+    text-align: center;
+}
+
+.numbers .plus {
+    background-color: #e3f4e4;
+    color: #2e7d32;
+}
+
+.numbers .minus {
+    background-color: #fdecea;
+    color: #c62828;
+}
+
+/* 3. ТАБЛИЦІ СУМ */
+.sums-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.sums {
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.sums th,
+.sums td {
+    padding: 6px 10px;
+    border: 1px solid #c3ced9;
+}
+
+.sums th {
+    background-color: #2b6ca3;
+    color: #ffffff;
+}
+
+.sums .plus {
+    color: #2e7d32;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sums .minus {
+    color: #c62828;
+    font-weight: bold;
+    text-align: center;
+}

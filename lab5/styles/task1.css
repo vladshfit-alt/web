@@ -1,0 +1,85 @@
+/*
+    task1.css - сторінка завдання 1: панель керування, повідомлення,
+    таблиця розкладу
+*/
+
+/* 1. ПАНЕЛЬ КЕРУВАННЯ */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.controls input {
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* 2. ПОВІДОМЛЕННЯ */
+.msg {
+    padding: 8px 12px;
+    border-left: 4px solid;
+}
+
+.msg-ok {
+    border-color: #2e7d32;
+    background-color: #e3f4e4;
+    font-weight: bold;
+}
+
+.msg-info {
+    border-color: #2b6ca3;
+    background-color: #e3eef8;
+    font-weight: bold;
+}
+
+.msg-warn {
+    border-color: #e0a800;
+    background-color: #fff6dc;
+}
+
+/* 3. ТАБЛИЦЯ РОЗКЛАДУ */
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.schedule th,
+.schedule td {
+    padding: 6px 8px;
+    border: 1px solid #d5dde5;
+    text-align: left;
+}
+
+.schedule th {
+    background-color: #2b6ca3;
+    color: #ffffff;
+}
+
+.schedule .past {
+    color: #888888;
+}
+
+.schedule .current {
+    background-color: #e3f4e4;
+    font-weight: bold;
+}
+
+.no-teacher {
+    color: #c62828;
+    font-style: italic;
+}
+
+/* 4. ВУЗЬКІ ЕКРАНИ (до 767px) */
+@media (max-width: 767px) {
+    .schedule {
+        font-size: 12px;
+    }
+
+    .schedule th,
+    .schedule td {
+        padding: 4px;
+    }
+}
