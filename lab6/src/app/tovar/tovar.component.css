@@ -1,0 +1,63 @@
+/*
+    tovar.component.css - стилі компонента для роботи з класами
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. ФОРМА */
+.forma {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+fieldset {
+    display: flex;
+    flex: 1 1 280px;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 10px 14px 14px;
+    border: 2px solid #2b6ca3;
+    border-radius: 6px;
+}
+
+legend {
+    padding: 0 6px;
+    color: #1f4e79;
+    font-weight: bold;
+}
+
+input {
+    padding: 6px 8px;
+    border: 1px solid #c3ced9;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+/* 2. ПОМИЛКИ ВВЕДЕННЯ */
+fieldset.invalid {
+    border-color: #c62828;
+}
+
+.error {
+    margin: 6px 0 0;
+    color: #c62828;
+    font-weight: bold;
+}
+
+.error:empty {
+    display: none;
+}
+
+/* 3. РЕЗУЛЬТАТИ */
+h3 {
+    margin: 10px 0 4px;
+    color: #1f4e79;
+}
+
+.result {
+    margin: 0;
+    padding: 8px 12px;
+    background-color: #e3f4e4;
+    border-left: 4px solid #2e7d32;
+}

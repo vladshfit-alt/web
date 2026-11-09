@@ -1,0 +1,52 @@
+/*
+    styles.css - загальні стилі сайту ЛР6
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. СТОРІНКА */
+body {
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* 2. КАРТКИ */
+.card {
+    margin: 16px 0;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    margin: 0 0 10px;
+    color: #1f4e79;
+    font-size: 20px;
+}
+
+/* 3. КНОПКИ */
+.btn {
+    margin-top: 14px;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2b6ca3;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1f4e79;
+}
+
+/* 4. АДАПТИВНІСТЬ */
+@media (max-width: 767px) {
+    .card {
+        padding: 12px 14px;
+    }
+}
