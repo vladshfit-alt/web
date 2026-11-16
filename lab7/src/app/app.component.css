@@ -1,0 +1,47 @@
+/*
+    app.component.css - головне меню і розмітка головного компонента
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. ГОЛОВНЕ МЕНЮ */
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #2b6ca3;
+}
+
+.menu-link {
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu-link:hover {
+    background-color: #1f4e79;
+}
+
+.menu-link.active {
+    background-color: #f4f6f8;
+    color: #1f4e79;
+    font-weight: bold;
+}
+
+/* 2. ОСНОВНИЙ ВМІСТ */
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 20px 20px;
+}
+
+/* 3. АДАПТИВНІСТЬ */
+@media (max-width: 767px) {
+    .main-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        padding: 6px 10px 10px;
+    }
+}

@@ -1,0 +1,45 @@
+/*
+    masyv1.component.css - стилі компонента одновимірного масиву
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. ФОРМА */
+.forma {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    width: 120px;
+    padding: 6px 8px;
+    border: 1px solid #c3ced9;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.forma .btn {
+    margin-top: 0;
+}
+
+/* 2. ЕЛЕМЕНТИ МАСИВУ */
+.elements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.element {
+    min-width: 54px;
+    padding: 6px 4px;
+    border: 1px solid #c3ced9;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.element.bilshyj {
+    border-color: #2e7d32;
+    background-color: #e3f4e4;
+    font-weight: bold;
+}

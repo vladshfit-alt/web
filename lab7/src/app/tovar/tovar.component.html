@@ -1,0 +1,53 @@
+<!-- BEGIN TASK -->
+<section class="card">
+    <h2>Завдання (варіант 12)</h2>
+    <p>
+        Базовий клас: Товар (поле - кількість, ціна). Метод: Вартість товару.<br>
+        Нащадок: Фломастери (поле - назва, сорт - s).<br>
+        Зміни в нащадках: Змінити вартість фломастерів з урахуванням сорту в 1 / s раз.
+    </p>
+</section>
+<!-- END TASK -->
+
+<!-- BEGIN FORM -->
+<section class="card">
+    <h2>Вхідні дані</h2>
+    <form class="forma">
+        <fieldset [class.invalid]="tovar_pomylka != ''">
+            <legend>Товар</legend>
+            <label for="k1">Кількість, шт</label>
+            <input type="number" id="k1" value="10" min="1" step="1" #k1>
+            <label for="c1">Ціна, грн</label>
+            <input type="number" id="c1" value="25" min="0" step="0.01" #c1>
+            <p class="error">{{ tovar_pomylka }}</p>
+        </fieldset>
+        <fieldset [class.invalid]="flomastery_pomylka != ''">
+            <legend>Фломастери</legend>
+            <label for="k2">Кількість, шт</label>
+            <input type="number" id="k2" value="12" min="1" step="1" #k2>
+            <label for="c2">Ціна, грн</label>
+            <input type="number" id="c2" value="40" min="0" step="0.01" #c2>
+            <label for="n2">Назва</label>
+            <input type="text" id="n2" value="Веселка" #n2>
+            <label for="s2">Сорт s</label>
+            <input type="number" id="s2" value="2" min="1" step="1" #s2>
+            <p class="error">{{ flomastery_pomylka }}</p>
+        </fieldset>
+    </form>
+    <button class="btn" type="button"
+            (click)="rozrahunok(k1.value, c1.value, k2.value, c2.value,
+                                n2.value, s2.value)">
+        Розрахунок
+    </button>
+</section>
+<!-- END FORM -->
+
+<!-- BEGIN RESULT -->
+<section class="card">
+    <h2>Результати обрахунків</h2>
+    <h3>Товар</h3>
+    <p class="result">{{ tovar_show }}</p>
+    <h3>Фломастери</h3>
+    <p class="result">{{ flomastery_show }}</p>
+</section>
+<!-- END RESULT -->

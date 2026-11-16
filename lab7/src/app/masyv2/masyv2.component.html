@@ -1,0 +1,50 @@
+<!-- BEGIN TASK -->
+<section class="card">
+    <h2>Двовимірний масив (варіант 24)</h2>
+    <p>
+        Дано дійсний масив розмірністю n * m, в якому не всі елементи
+        дорівнюють нулю. Отримати новий масив шляхом ділення всіх елементів
+        даного масиву на його більший за модулем елемент.
+    </p>
+    <p>Масив заповнюється випадковими дійсними числами від -10 до 10.</p>
+</section>
+<!-- END TASK -->
+
+<!-- BEGIN FORM -->
+<section class="card">
+    <h2>Вхідні дані</h2>
+    <div class="forma">
+        <label for="n">Рядків n</label>
+        <input type="number" id="n" value="4" min="1" max="10" step="1" #n
+               (input)="perevirka(n.value, m.value)">
+        <label for="m">Стовпців m</label>
+        <input type="number" id="m" value="5" min="1" max="10" step="1" #m
+               (input)="perevirka(n.value, m.value)">
+        <button class="btn" type="button" [disabled]="pomylka != ''"
+                (click)="rozrahunok(n.value, m.value)">
+            Згенерувати і обчислити
+        </button>
+    </div>
+    <p class="error">{{ pomylka }}</p>
+</section>
+<!-- END FORM -->
+
+<!-- BEGIN RESULT -->
+<section class="card">
+    <h2>Даний масив</h2>
+    <table class="matrix">
+        <tr *ngFor="let rjadok of masyv.a; let i = index">
+            <td *ngFor="let x of rjadok; let j = index"
+                [class.maks]="masyv.b.length > 0 && i == masyv.i_maks &&
+                              j == masyv.j_maks">{{ x }}</td>
+        </tr>
+    </table>
+    <p class="result">{{ rezultat }}</p>
+    <h2>Новий масив</h2>
+    <table class="matrix">
+        <tr *ngFor="let rjadok of masyv.b">
+            <td *ngFor="let x of rjadok">{{ x }}</td>
+        </tr>
+    </table>
+</section>
+<!-- END RESULT -->

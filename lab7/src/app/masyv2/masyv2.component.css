@@ -1,0 +1,51 @@
+/*
+    masyv2.component.css - стилі компонента двовимірного масиву
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. ФОРМА */
+.forma {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    width: 70px;
+    padding: 6px 8px;
+    border: 1px solid #c3ced9;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.forma .btn {
+    margin-top: 0;
+}
+
+/* 2. ТАБЛИЦІ МАСИВІВ */
+.matrix {
+    margin-bottom: 12px;
+    border-collapse: collapse;
+}
+
+.matrix td {
+    min-width: 58px;
+    padding: 6px 8px;
+    border: 1px solid #c3ced9;
+    text-align: right;
+}
+
+.matrix td.maks {
+    background-color: #fff3c4;
+    font-weight: bold;
+}
+
+/* 3. АДАПТИВНІСТЬ */
+@media (max-width: 767px) {
+    .matrix td {
+        min-width: 0;
+        padding: 4px;
+        font-size: 13px;
+    }
+}

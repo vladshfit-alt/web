@@ -1,0 +1,80 @@
+/*
+    styles.css - загальні стилі сайту ЛР7
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. СТОРІНКА */
+body {
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* 2. КАРТКИ */
+.card {
+    margin: 16px 0;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    margin: 0 0 10px;
+    color: #1f4e79;
+    font-size: 20px;
+}
+
+/* 3. КНОПКИ */
+.btn {
+    margin-top: 14px;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2b6ca3;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1f4e79;
+}
+
+/* 4. НЕАКТИВНА І ДРУГОРЯДНА КНОПКИ */
+.btn:disabled {
+    background-color: #9aa9b7;
+    cursor: not-allowed;
+}
+
+.btn-grey {
+    background-color: #6b7a89;
+}
+
+/* 5. ПОМИЛКИ І РЕЗУЛЬТАТИ */
+.error {
+    margin: 8px 0 0;
+    color: #c62828;
+    font-weight: bold;
+}
+
+.error:empty {
+    display: none;
+}
+
+.result {
+    margin: 10px 0;
+    padding: 8px 12px;
+    background-color: #e3f4e4;
+    border-left: 4px solid #2e7d32;
+}
+
+/* 6. АДАПТИВНІСТЬ */
+@media (max-width: 767px) {
+    .card {
+        padding: 12px 14px;
+    }
+}

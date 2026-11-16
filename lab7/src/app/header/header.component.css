@@ -1,0 +1,45 @@
+/*
+    header.component.css - стилі шапки сайту
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. ШАПКА */
+.page-header {
+    padding: 20px;
+    background-color: #1f4e79;
+    color: #ffffff;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0 0 6px;
+    font-size: 26px;
+}
+
+.subtitle {
+    margin: 0 0 10px;
+    color: #cfe0f0;
+}
+
+/* 2. ДАНІ СТУДЕНТА */
+.student-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 3. АДАПТИВНІСТЬ */
+@media (max-width: 767px) {
+    .page-header h1 {
+        font-size: 22px;
+    }
+
+    .student-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
