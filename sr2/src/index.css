@@ -1,0 +1,74 @@
+/*
+    index.css - загальні стилі сторінки
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. СКИДАННЯ І ЗМІННІ */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #1d3557;
+  --blue-light: #457b9d;
+  --gold: #e9a23b;
+  --bg: #f6f7fb;
+  --text: #222831;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* 2. СМУГА З ДАНИМИ СТУДЕНТА */
+.student {
+  margin: 0;
+  padding: 6px 16px;
+  background-color: #0f1d30;
+  color: #c9d3e0;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* 3. СЕКЦІЇ */
+section {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 48px 20px 8px;
+}
+
+.section-title {
+  margin-bottom: 24px;
+  color: var(--blue);
+  font-size: 30px;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 10px auto 0;
+  background-color: var(--gold);
+}
+
+/* 4. АДАПТИВНІСТЬ */
+@media (max-width: 767px) {
+  section {
+    padding: 32px 14px 4px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}

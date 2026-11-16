@@ -1,0 +1,178 @@
+/*
+    Header.css - стилі шапки, меню і слайдера
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. ВЕРХНЯ ПАНЕЛЬ */
+.header-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 14px 20px;
+}
+
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.logo b {
+  display: block;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.logo small {
+  color: var(--blue-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logo-sign {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, var(--blue) 55%, var(--gold) 55%);
+}
+
+/* 2. ГОЛОВНЕ МЕНЮ: пункти змінюються під час наведення */
+.menu {
+  display: flex;
+  gap: 6px;
+}
+
+.menu a {
+  padding: 8px 14px;
+  border-bottom: 3px solid transparent;
+  color: var(--blue);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.menu a:hover {
+  border-bottom-color: var(--gold);
+  background-color: #fdf3e2;
+  color: #b06f0a;
+}
+
+.burger {
+  display: none;
+  border: none;
+  background: none;
+  color: var(--blue);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* 3. СЛАЙДЕР */
+.slider {
+  padding: 70px 20px 40px;
+  color: #ffffff;
+  text-align: center;
+  transition: background-color 0.8s;
+}
+
+.slide {
+  max-width: 760px;
+  margin: 0 auto;
+  animation: appear 0.8s;
+}
+
+.slide h1 {
+  margin-bottom: 14px;
+  font-size: 42px;
+}
+
+.slide p {
+  margin: 0 0 26px;
+  font-size: 19px;
+  opacity: 0.9;
+}
+
+.slide-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background-color: var(--gold);
+  color: var(--blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.slide-btn:hover {
+  background-color: #ffffff;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.dot-active {
+  background-color: #ffffff;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 4. АДАПТИВНІСТЬ */
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu-open {
+    display: flex;
+  }
+
+  .slider {
+    padding: 44px 16px 28px;
+  }
+
+  .slide h1 {
+    font-size: 28px;
+  }
+
+  .slide p {
+    font-size: 16px;
+  }
+}

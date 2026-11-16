@@ -1,0 +1,94 @@
+/*
+    Faculties.css - картки факультетів
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. СІТКА КАРТОК */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* 2. КАРТКА */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-top: 6px solid;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  font-size: 19px;
+}
+
+.card p {
+  margin: 0 0 10px;
+  color: #555f6d;
+}
+
+.card ul {
+  flex-grow: 1;
+  margin: 0 0 12px;
+  padding-left: 18px;
+}
+
+.card-count {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 3. КОЛЬОРИ КАРТОК */
+.card-blue {
+  border-color: var(--blue-light);
+}
+
+.card-blue h3 {
+  color: var(--blue);
+}
+
+.card-gold {
+  border-color: var(--gold);
+}
+
+.card-gold h3 {
+  color: #9c5f05;
+}
+
+.card-plum {
+  border-color: #6b3f69;
+}
+
+.card-plum h3 {
+  color: #6b3f69;
+}
+
+.card-green {
+  border-color: #2a6f6b;
+}
+
+.card-green h3 {
+  color: #2a6f6b;
+}
+
+/* 4. АДАПТИВНІСТЬ */
+@media (max-width: 1023px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

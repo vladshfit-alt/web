@@ -1,0 +1,15 @@
+{
+  "name": "Університет «Обрій»",
+  "about": "Навчальний сайт вигаданого університету для самостійної роботи з React.",
+  "contacts": [
+    { "id": 1, "label": "Адреса", "value": "м. Київ, вул. Обрійна, 1" },
+    { "id": 2, "label": "Телефон", "value": "+380 44 000 00 00" },
+    { "id": 3, "label": "Пошта", "value": "info@obrii-university.example" }
+  ],
+  "socials": [
+    { "id": 1, "name": "Facebook", "short": "f", "url": "https://www.facebook.com/" },
+    { "id": 2, "name": "Instagram", "short": "ig", "url": "https://www.instagram.com/" },
+    { "id": 3, "name": "Telegram", "short": "tg", "url": "https://telegram.org/" },
+    { "id": 4, "name": "YouTube", "short": "yt", "url": "https://www.youtube.com/" }
+  ]
+}
