@@ -1,0 +1,136 @@
+/*
+    style.css - стилі сторінки каталогу рослин
+    Шаренко Владислав Юрійович, група АнД-31, варіант 24
+*/
+
+/* 1. СТОРІНКА */
+body {
+    margin: 0;
+    background-color: #f2f6f1;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* 2. ШАПКА */
+.page-header {
+    padding: 20px;
+    background-color: #2f5d3a;
+    color: #ffffff;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0 0 6px;
+    font-size: 26px;
+}
+
+.subtitle {
+    margin: 0 0 10px;
+    color: #d3e6d6;
+}
+
+.student-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 3. КАРТКИ */
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px 20px;
+}
+
+.card {
+    margin: 16px 0;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    margin: 0 0 10px;
+    color: #2f5d3a;
+    font-size: 20px;
+}
+
+/* 4. ГРУПИ КАТАЛОГУ */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.group {
+    flex: 1 1 260px;
+    padding: 10px 14px;
+    border-top: 5px solid;
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+
+.group h2 {
+    font-size: 18px;
+}
+
+.group ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.group li {
+    margin-bottom: 6px;
+}
+
+.jistivni {
+    border-color: #2e7d32;
+}
+
+.jistivni h2 {
+    color: #2e7d32;
+}
+
+.nejistivni {
+    border-color: #8d6e63;
+}
+
+.nejistivni h2 {
+    color: #6d4c41;
+}
+
+.otrujni {
+    border-color: #c62828;
+}
+
+.otrujni h2 {
+    color: #c62828;
+}
+
+.error {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* 5. АДАПТИВНІСТЬ */
+@media (max-width: 767px) {
+    .page-header h1 {
+        font-size: 22px;
+    }
+
+    .student-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        padding: 6px 10px 10px;
+    }
+}
